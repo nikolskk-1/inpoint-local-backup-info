@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="How INPoint Local Backup accesses Google Drive data and stores backups locally.">
+  <title>Privacy policy | INPoint Local Backup</title>
+  <style>body{margin:0;background:#f6f8fb;color:#172638;font:18px/1.7 system-ui,sans-serif}main{max-width:780px;margin:48px auto;padding:36px;background:white;border-top:5px solid #25636b;border-radius:8px}h1{font-size:clamp(2rem,6vw,3rem);line-height:1.15;margin:12px 0 24px}h2{font-size:1.25rem;margin-top:32px}a{color:#075e83;text-underline-offset:3px}nav{display:flex;gap:24px;flex-wrap:wrap;font-size:16px}p,li{max-width:70ch}.label,footer{color:#536477;font-size:15px}footer{margin-top:40px;border-top:1px solid #d9e1e8;padding-top:20px}@media(max-width:600px){main{margin:0;padding:24px;border-radius:0}}</style>
+</head>
+<body>
+<main>
+  <nav aria-label="Main navigation"><a href="index.html">Overview</a><a href="privacy.html" aria-current="page">Privacy policy</a></nav>
+  <p class="label">INPoint Local Backup · Last updated: 19 October 2026</p>
+  <h1>Privacy policy</h1>
+  <p>This policy covers the privately operated INPoint Local Backup desktop utility and its informational website. The operator and maintainer is <a href="https://github.com/nikolskk-1">nikolskk-1</a>. It does not cover other applications or services.</p>
+  <h2>Data accessed and purpose</h2>
+  <p>With the account holder's consent, the utility uses Google Drive read-only access to retrieve folder and file metadata, including names, identifiers, parent folders, file types, modification information and download availability, and to export the contents of selected Google Workspace files. It also reads ordinary files in the configured Google Drive for desktop folders.</p>
+  <p>This data is used to locate backup sources, create local copies, export documents, record a manifest and verify restoration. The <code>drive.readonly</code> permission technically covers all Drive files the account can access. The utility restricts backup processing to its configured folders. It does not modify Google Drive content or sharing settings.</p>
+  <h2>Storage and protection</h2>
+  <p>Archives, exported documents, file manifests and operational logs are stored on the operator's Windows computer. A manifest may include file paths, sizes, hashes and Google file identifiers or versions. Google authorization credentials are stored locally; the refresh token is protected with Windows DPAPI under the operator's Windows account. File permissions limit access to the operator, Windows SYSTEM and local administrators.</p>
+  <p>Backup archives are not independently password-encrypted ZIP files. Protection at rest depends on the computer's storage encryption and access controls. These controls do not prevent access by someone who controls the operator's signed-in account or computer.</p>
+  <h2>Transfers and sharing</h2>
+  <p>The utility communicates with Google's authorization and Drive API services over HTTPS to authenticate, request metadata and download exports. It does not upload backup contents, manifests or authorization tokens to GitHub, this website, an analytics service or an AI service. It does not sell Google user data or use it for advertising, profiling or training AI models.</p>
+  <p>INPoint Local Backup's use and transfer of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including its Limited Use requirements.</p>
+  <h2>Retention, deletion and revocation</h2>
+  <p>Local copies and logs remain until the operator deletes them under the applicable retention requirements. The current utility does not automatically delete older archives. Revoking authorization stops future API access but does not delete previously saved local backups.</p>
+  <p>The account holder can revoke the application's access through <a href="https://myaccount.google.com/connections">Google Account connections</a>. To stop all future backups, also disable the scheduled Windows task. Local authorization files, archives and logs can be deleted by the operator when retention obligations permit. Source documents in Google Drive are not deleted by these actions.</p>
+  <h2>This informational website</h2>
+  <p>This static website does not request Google sign-in, accept file uploads or include advertising, analytics scripts or tracking cookies added by the maintainer. It is hosted by GitHub Pages. GitHub processes visitor information, including IP addresses for security, under the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub Privacy Statement</a>. The backup utility does not send Google Drive data to this website.</p>
+  <h2>Contact and updates</h2>
+  <p>Questions about this policy can be raised in the <a href="https://github.com/nikolskk-1/inpoint-local-backup-info/issues">project issue tracker</a>. Issues are public: do not include personal documents, credentials, tokens or other confidential information. This page will be updated when the described data practices change.</p>
+  <footer><a href="index.html">Back to INPoint Local Backup</a></footer>
+</main>
+</body>
+</html>

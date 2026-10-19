@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Information about INPoint Local Backup, a privately operated utility for local Google Drive backups.">
+  <title>INPoint Local Backup</title>
+  <style>body{margin:0;background:#f6f8fb;color:#172638;font:18px/1.7 system-ui,sans-serif}main{max-width:780px;margin:48px auto;padding:36px;background:white;border-top:5px solid #25636b;border-radius:8px}h1{font-size:clamp(2rem,6vw,3rem);line-height:1.15;margin:12px 0 24px}h2{font-size:1.25rem;margin-top:32px}a{color:#075e83;text-underline-offset:3px}nav{display:flex;gap:24px;flex-wrap:wrap;font-size:16px}p,li{max-width:70ch}.label,footer{color:#536477;font-size:15px}footer{margin-top:40px;border-top:1px solid #d9e1e8;padding-top:20px}@media(max-width:600px){main{margin:0;padding:24px;border-radius:0}}</style>
+</head>
+<body>
+<main>
+  <nav aria-label="Main navigation"><a href="index.html" aria-current="page">Overview</a><a href="privacy.html">Privacy policy</a></nav>
+  <p class="label">Desktop backup utility</p>
+  <h1>INPoint Local Backup</h1>
+  <p>A privately operated Windows utility that helps the account holder save dated copies of selected Google Drive folders to their own computer.</p>
+  <h2>What the application does</h2>
+  <ul>
+    <li>Copies ordinary files from configured Google Drive for desktop folders into local archives.</li>
+    <li>Uses the Google Drive API to identify and export Google Docs, Sheets and Slides as DOCX, XLSX and PPTX files.</li>
+    <li>Records a local file manifest and checks restored files against SHA-256 hashes.</li>
+  </ul>
+  <h2>Google account access</h2>
+  <p>The account holder signs in to Google and grants the <code>drive.readonly</code> permission. This permission can read and download all Drive files accessible to that account. The utility's configured backup scope is limited to selected folders; that folder limit is enforced by the utility, not by the OAuth permission itself.</p>
+  <p>The utility does not create, edit, move or delete source files in Google Drive. It does not upload backup archives to this website, GitHub or another cloud destination.</p>
+  <h2>Local operation</h2>
+  <p>Backup files, manifests and logs remain on the operator's computer. The utility requires an available computer, access to the configured source folders and a valid Google authorization. Office exports do not preserve the complete Google Drive version history or sharing permissions.</p>
+  <h2>Operator and contact</h2>
+  <p>This utility is maintained by <a href="https://github.com/nikolskk-1">nikolskk-1</a> for the account holder's own backup workflow. This page describes the utility, not a general corporate privacy policy or a public backup service.</p>
+  <p>For non-sensitive questions, use the <a href="https://github.com/nikolskk-1/inpoint-local-backup-info/issues">project issue tracker</a>. Do not post documents, account credentials, authorization tokens or backup archives there.</p>
+  <footer>Read the <a href="privacy.html">privacy policy</a> before authorizing access. Last updated: 19 October 2026.</footer>
+</main>
+</body>
+</html>
